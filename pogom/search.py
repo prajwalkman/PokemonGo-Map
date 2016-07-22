@@ -111,5 +111,6 @@ def search_loop(args):
             i += 1
         except Exception as e:
 	    log.warn("Search loop exception: " + str(e))
+	finally:
 	    log.warn('Waiting {:d} seconds before restarting search.'.format(args.scan_delay))
 	    time.sleep(args.scan_delay)
